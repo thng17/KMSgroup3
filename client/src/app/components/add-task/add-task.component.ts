@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from "@angular/forms";
+import { Task } from "../../model/Task";
 
 @Component({
   selector: 'app-add-task',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddTaskComponent implements OnInit {
 
-  constructor() { }
+  public tasks: Task[] = [];
+  public todo: string = '';
+  public form: FormGroup;
+
+  constructor() {
+    this.form = new FormGroup({
+      todo: new FormControl()
+    })
+  }
 
   ngOnInit(): void {
+  }
+
+  clearInput(){
+    this.form.reset('');
   }
 
 }
