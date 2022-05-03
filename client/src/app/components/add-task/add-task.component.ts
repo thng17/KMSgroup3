@@ -9,7 +9,7 @@ import { Task } from "../../model/Task";
 })
 export class AddTaskComponent implements OnInit {
 
-  private tasks: Task[] = [];
+  public tasks: Task[] = [];
   public form: FormGroup;
   private todo: FormControl | undefined;
 
