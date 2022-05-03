@@ -1,10 +1,9 @@
-import { Task } from "../../model/Task";
-import { AddTaskComponent} from "../add-task/add-task.component.ts"
+
 
 <div class="row">
   <div class="col">
-    <div *ngFor="let task of AddTaskComponent.tasks">
-
+    <div *ngFor="let task of dataService.tasks">
+        <app-task-card></app-task-card>
     </div>
 
   </div>
