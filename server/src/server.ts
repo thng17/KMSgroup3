@@ -8,8 +8,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('getAll', (req, res) => {
-    res.send()
-} )
+    res.send(data);
+})
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
