@@ -1,1 +1,7 @@
-<p>add-task works!</p>
+<form [formGroup]="form" (ngSubmit)="addToDo">
+  <div class="form-group">
+    <label for="todo">Add tasks to To-Do-List</label>
+    <input class="form-control" id="todo" type="text" name="toDoInput" placeholder="your task" formControlName="todo">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="addToDo()">Add</button>
+</form>
