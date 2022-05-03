@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from "@angular/forms";
-import { Task } from "../../model/Task";
+import { DataService } from "../../service/data.service";
 
 @Component({
   selector: 'app-add-task',
@@ -9,24 +8,12 @@ import { Task } from "../../model/Task";
 })
 export class AddTaskComponent implements OnInit {
 
-  public tasks: Task[] = [];
-  public form: FormGroup;
-  private todo: FormControl | undefined;
+  constructor(public dataService: DataService) {
 
-  constructor() {
-    this.form = new FormGroup({
-      todo: new FormControl(),
-    })
   }
 
   ngOnInit(): void {
   }
 
-  addToDo(){
-    const toDoTitle = this.form.value.todo;
-    this.tasks.push(toDoTitle);
-    this.form.reset('');
-    //To test if it works
-    console.log(this.tasks);
-  }
+
 }
