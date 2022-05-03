@@ -9,21 +9,24 @@ import { Task } from "../../model/Task";
 })
 export class AddTaskComponent implements OnInit {
 
-  public tasks: Task[] = [];
-  public todo: string = '';
+  private tasks: Task[] = [];
   public form: FormGroup;
+  private todo: FormControl | undefined;
 
   constructor() {
     this.form = new FormGroup({
-      todo: new FormControl()
+      todo: new FormControl(),
     })
   }
 
   ngOnInit(): void {
   }
 
-  clearInput(){
+  addToDo(){
+    const toDoTitle = this.form.value.todo;
+    this.tasks.push(toDoTitle);
     this.form.reset('');
+    //To test if it works
+    console.log(this.tasks);
   }
-
 }
