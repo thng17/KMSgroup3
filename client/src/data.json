@@ -1,0 +1,8 @@
+{
+  "exercises": [{
+    "id": 0,
+    "name": "name",
+    "description": "description",
+    "done": "false"
+  }]
+}
