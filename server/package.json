@@ -10,5 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.0"
-  }
+  },
+  "resolveJsonModule": true,
+  "esModuleInterop": true
 }
