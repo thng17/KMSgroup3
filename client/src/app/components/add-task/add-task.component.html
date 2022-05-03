@@ -1,7 +1,7 @@
 <form [formGroup]="form">
   <div class="form-group">
     <label for="todo">Add tasks to To-Do-List</label>
-    <input class="form-control" id="todo" placeholder="your task" formControlName="todo" [ngModel]="todo">
+    <input class="form-control" id="todo" placeholder="your task" formControlName="todo">
   </div>
   <button type="submit" class="btn btn-primary" (click)="clearInput()">Add</button>
 </form>
