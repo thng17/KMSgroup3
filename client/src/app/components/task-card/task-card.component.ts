@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Task } from '../../model/Task';
 
 @Component({
   selector: 'app-task-card',
@@ -11,5 +12,11 @@ export class TaskCardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  markAsDone(): void{
+    
+  }
+
+
 
 }
