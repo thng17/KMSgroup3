@@ -10,7 +10,4 @@ export class TasksListComponent implements OnInit {
 
   constructor(public dataService: DataService) { }
 
-  ngOnInit(): void {
-  }
-
 }

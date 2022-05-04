@@ -6,14 +6,10 @@ import { DataService } from "../../service/data.service";
   templateUrl: './add-task.component.html',
   styleUrls: ['./add-task.component.css']
 })
-export class AddTaskComponent implements OnInit {
+export class AddTaskComponent {
 
   constructor(public dataService: DataService) {
 
   }
-
-  ngOnInit(): void {
-  }
-
 
 }
