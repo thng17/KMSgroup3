@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon",
     "build": "tsc",
+    "lint": "npx eslint . --ext .ts",
     "test": "mocha -r ts-node/register src/tests/backend.test.ts"
   },
   "author": "",
