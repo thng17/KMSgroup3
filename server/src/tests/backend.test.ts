@@ -13,3 +13,14 @@ describe('Base Route test', () => {
         })
     })
 })
+
+describe('GET all todos', () => {
+    it('test get all todos', () => {
+        chai.request(app)
+            .get('/all')
+            .end((err, res) =>{
+                res.should.have.status(200)
+                res.body.should.be.a('array');
+            });
+    });
+});
