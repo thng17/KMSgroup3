@@ -6,17 +6,18 @@ app.use(express.urlencoded({
 }))
 const port = 3000
 
-app.use(express.json)
+
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+})
 
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
 app.get('/all', (req, res) => {
-    res.send(data)
-    res.sendStatus(200)
+    res.send(data);
+    res.sendStatus(200);
 } )
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
+app.use(express.json)
