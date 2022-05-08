@@ -13,4 +13,12 @@ describe('DataService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+  it('task should be not null', () => {
+    if(service.getTask().length>0){
+      for(let i =0;i<service.getTask().length; i++){
+        expect(service.getTask()[i]).not.toBeNull();
+      }
+    }else expect(service.getTask()).not.toBeNull();
+  });
+
 });

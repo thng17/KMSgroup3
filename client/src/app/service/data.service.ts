@@ -24,5 +24,8 @@ export class DataService {
     //To test if it works
     console.log(this.tasks);
   }
+  getTask(){
+    return this.tasks;
+  }
 
 }
