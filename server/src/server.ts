@@ -22,6 +22,22 @@ app.get('/all', (req, res) => {
 
 app.use(express.json())
 
+app.post('/data', (req, res) => {
+    const id = data.exercises.length;
+    const title = req.body.title;
+    const description = req.body.description;
+
+    data.exercises.push({id, title, description, done : "false"})
+
+    const result = saveData();
+    if (result == "saved") {
+        res.sendStatus(200);
+    } else {
+        res.sendStatus(500);
+    }
+})
+
+
 app.put('/data', (req, res) => {
     const id = req.body.id;
     const name = req.body.title;
