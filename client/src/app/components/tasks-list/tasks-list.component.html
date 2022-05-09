@@ -1,1 +1,11 @@
-<p>tasks-list works!</p>
+
+
+<div class="row">
+  <div class="col">
+    <div *ngFor="let task of dataService.tasks">
+        <app-task-card></app-task-card>
+    </div>
+
+  </div>
+
+</div>

@@ -2,13 +2,13 @@
   "exercises": [
     {
       "id": 0,
-      "name": "name",
+      "title": "name",
       "description": "description",
       "done": "false"
     },
     {
       "id": 1,
-      "name": "task",
+      "title": "task",
       "description": "do task",
       "done": "true"
     }
