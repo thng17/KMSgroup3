@@ -10,27 +10,25 @@ on:
     branches: [ nodeTest ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
-  defaults:
-    run:
-    working-directory: ./server/
-    strategy:
-      matrix:
-        node-version: [ 12.x, 14.x, 16.x ]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 14
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - run: npm ci
-      - run: npm build
-      - run: npm start
-      - run: npm test
+          node-version: 14
+      - name: Install dependencies
+        run: npm install
+        working-directory: server
+      - name: Build
+        run: npm run build
+        working-directory: server
+      - name: Start and Test
+        run: |
+          npm start
+          npm test
+        working-directory: server
+
+
+
