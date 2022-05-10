@@ -16,6 +16,7 @@
 # dependencies
 /server/node_modules/
 /client/node_modules/
+/node_modules
 
 # profiling files
 chrome-profiler-events*.json

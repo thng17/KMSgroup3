@@ -114,6 +114,7 @@
   },
   "defaultProject": "KMSGruppe3",
   "cli": {
+    "analytics": false,
     "defaultCollection": "@angular-eslint/schematics"
   }
 }
