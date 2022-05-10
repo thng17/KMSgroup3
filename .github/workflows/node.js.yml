@@ -10,7 +10,6 @@ on:
     branches: [ nodeTest ]
 
 jobs:
-
   build:
 
     runs-on: ubuntu-latest
@@ -28,4 +27,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+    - run: npm run build --if-present
     - run: npm test
