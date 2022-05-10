@@ -1,11 +1,8 @@
-
-
 <div class="row">
   <div class="col">
+    <p>Here is the task list:</p>
     <div *ngFor="let task of dataService.tasks">
-        <app-task-card></app-task-card>
+        <app-task-card [task]="task"></app-task-card>
     </div>
-
   </div>
-
 </div>

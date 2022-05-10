@@ -10,8 +10,7 @@ export class TaskCardComponent implements OnInit {
 
   @Input() task: Task;
 
-  constructor(task : Task) {
-    this.task = task;
+  constructor() {
   }
 
   ngOnInit(): void {
