@@ -3,5 +3,5 @@
     <label for="todo">Add tasks to To-Do-List</label>
     <input class="form-control" id="todo" type="text" name="toDoInput" placeholder="your task" formControlName="todo">
   </div>
-  <button type="submit" class="btn btn-primary" (click)="dataService.addToDo()">Add</button>
+  <button type="submit" id="addButton" class="btn btn-primary" (click)="onClickAddBtn()">Add</button>
 </form>
