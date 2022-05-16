@@ -4,6 +4,7 @@ import axios from "axios";
 
 chai.use(chaiHttp)
 
+/*
 describe('Base Route test', () => {
     it('text "Hello World!"', () => {
         return axios.get('http://localhost:3000/').then(res => {
@@ -11,6 +12,7 @@ describe('Base Route test', () => {
         })
     })
 })
+ */
 
 describe('GET all todos', () => {
     it('test get all todos', () => {
