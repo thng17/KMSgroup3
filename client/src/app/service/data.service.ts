@@ -24,7 +24,7 @@ export class DataService {
     const title = this.form.value.todo;
     const description = "Not implemented";
 
-    lastValueFrom(this.http.post("http://localhost:3000/data", {title, description})).then(() => {
+    lastValueFrom(this.http.post("http://localhost:3000/data", {title, description}, {responseType: 'text'})).then(() => {
       this.form.reset('');
       this.updateList()
       //To test if it works
