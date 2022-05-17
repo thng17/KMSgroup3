@@ -8,6 +8,7 @@ import { TaskCardComponent } from './components/task-card/task-card.component';
 import { TasksListComponent } from './components/tasks-list/tasks-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule} from "@angular/forms";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReactiveFormsModule} from "@angular/forms";
     imports: [
         BrowserModule,
         NgbModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]
