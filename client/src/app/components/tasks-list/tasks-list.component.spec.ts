@@ -1,8 +1,9 @@
+/*
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+
 
 import { TasksListComponent } from './tasks-list.component';
 import {DataService} from "../../service/data.service";
-import {HttpClient} from "@angular/common/http";
 
 
 describe('TasksListComponent', () => {
@@ -32,3 +33,4 @@ describe('TasksListComponent', () => {
     expect(dataService.tasks.length).toBeTruthy()
   });
 });
+*/
