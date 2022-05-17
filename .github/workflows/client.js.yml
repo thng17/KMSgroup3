@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ mark-as-done ]
+    branches: [ main ]
 
 permissions: write-all
 
@@ -21,16 +21,22 @@ jobs:
       - name: Install dependencies
         run: npm install
         working-directory: client
-    # - name: Build project
-    #    run: npm run build
-    #    working-directory: client
-     # - name: Test
-     #   run: |
-     #     npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
-     #   working-directory: client
-     # - name: Deploy
-      #  uses: JamesIves/github-pages-deploy-action@v4.3.3
-       # with:
-        # token: ${{ secrets.GITHUB_TOKEN }}
-         #branch: gh-pages # The branch the action should deploy to.
-         #folder: client/dist/kmsgruppe3 # The folder the action should deploy.
+      - name: Build project
+        run: npm run build -- --prod
+        working-directory: client
+      - name: Lint project
+        run: npm run lint
+        working-directory: client
+      - name: Test
+        run: |
+          npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+        working-directory: client
+      - name: Deploy
+          run: |
+            npm run deploy
+    #  - name: Deploy
+    #    uses: JamesIves/github-pages-deploy-action@v4.3.3
+    #    with:
+    #      token: ${{ secrets.GITHUB_TOKEN }}
+    #    branch: gh-pages # The branch the action should deploy to.
+    #    folder: client/dist/kmsgruppe3 # The folder the action should deploy.
