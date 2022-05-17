@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "deploy": "ng deploy --base-href=/KMSgroup3/"
+    "deploy": "ng deploy --base-href=/KMSgroup3/ --no-silent"
   },
   "private": true,
   "dependencies": {
