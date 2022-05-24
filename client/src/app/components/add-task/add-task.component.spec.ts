@@ -9,7 +9,10 @@ describe('AddTaskComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddTaskComponent ]
+      declarations: [ AddTaskComponent ],
+      imports: [
+        HttpClientTestingModule
+      ]
     })
     .compileComponents().then(() => {
       fixture = TestBed.createComponent(AddTaskComponent);
