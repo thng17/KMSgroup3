@@ -1,6 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AddTaskComponent } from './add-task.component';
+import {By} from "@angular/platform-browser";
 
 describe('AddTaskComponent', () => {
   let component: AddTaskComponent;
@@ -13,7 +14,10 @@ describe('AddTaskComponent', () => {
         HttpClientTestingModule
       ]
     })
-    .compileComponents();
+    .compileComponents().then(() => {
+      fixture = TestBed.createComponent(AddTaskComponent);
+      component = fixture.componentInstance;
+      });
   });
 
   beforeEach(() => {
@@ -25,4 +29,14 @@ describe('AddTaskComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should click Add button', fakeAsync(() => {
+    spyOn(component, 'onClickAddBtn');
+
+    let button = fixture.debugElement.query(By.css('#addButton'));
+    button.triggerEventHandler('click', null);
+    tick();
+    expect(component.onClickAddBtn).toHaveBeenCalled();
+  }));
+
 });

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DataService } from "../../service/data.service";
 
 @Component({
@@ -10,6 +10,10 @@ export class AddTaskComponent {
 
   constructor(public dataService: DataService) {
 
+  }
+
+  onClickAddBtn(){
+    this.dataService.addToDo();
   }
 
 }
